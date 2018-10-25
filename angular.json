@@ -123,5 +123,10 @@
       }
     }
   },
-  "defaultProject": "stuteinv"
+  "defaultProject": "stuteinv",
+  "schematics": {
+    "@schematics/angular:component": {
+      "styleext": "styl"
+    }
+  }
 }

@@ -1,0 +1,6 @@
+.card
+  .card-body
+    .card-title {{name}}
+    .card-subtitle {{location}}
+    a.btn.btn-primary([routerLink]="'/item/'+id") Edit
+    button.btn.btn-danger((click)="delete()", type="button") Delete
