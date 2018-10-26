@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatToolbarModule, MatButtonModule, MatCardModule} from '@angular/material';
 
 import { AppComponent } from './app.component';
 import {routes} from './app.routing';
@@ -28,7 +28,8 @@ import { CardComponent } from './components/card/card.component';
     RouterModule.forRoot(
       routes
     ),
-    NgbModule.forRoot()
+    BrowserAnimationsModule,
+    MatToolbarModule, MatButtonModule, MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
