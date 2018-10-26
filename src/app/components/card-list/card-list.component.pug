@@ -1,1 +1,2 @@
-app-card(name="Test 1", location="Jacobus", id="1")
+.list
+  app-card(*ngFor="let card of this.cards",name="{{card.name}}",location="{{card.location}}",description="{{card.description}}",id="{{card.id}}")

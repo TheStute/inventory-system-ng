@@ -1,8 +1,9 @@
 mat-card
   mat-card-header
     mat-card-title {{name}}
+    mat-card-subtitle {{location}}
   mat-card-content
-    p {{location}}
+    p {{description}}
   mat-card-actions
    button(mat-raised-button, [routerLink]="'/item/'+id") Edit
    button(mat-raised-button, color="warn", (click)="delete()") Delete

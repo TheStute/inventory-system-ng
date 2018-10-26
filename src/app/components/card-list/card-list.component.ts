@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {ItemsService} from "../../services/items.service";
 
 @Component({
   selector: 'app-card-list',
@@ -6,10 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./card-list.component.styl']
 })
 export class CardListComponent implements OnInit {
+  private cards: object[] = [];
 
-  constructor() { }
+  constructor(private itemsService: ItemsService) { }
 
   ngOnInit() {
+    this.itemsService.getItems().subscribe((items) => {
+      this.cards = items;
+    })
   }
 
 }
