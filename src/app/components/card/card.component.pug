@@ -1,6 +1,8 @@
-.card
-  .card-body
-    .card-title {{name}}
-    .card-subtitle {{location}}
-    a.btn.btn-primary([routerLink]="'/item/'+id") Edit
-    button.btn.btn-danger((click)="delete()", type="button") Delete
+mat-card
+  mat-card-header
+    mat-card-title {{name}}
+  mat-card-content
+    p {{location}}
+  mat-card-actions
+   button(mat-raised-button, [routerLink]="'/item/'+id") Edit
+   button(mat-raised-button, color="warn", (click)="delete()") Delete
